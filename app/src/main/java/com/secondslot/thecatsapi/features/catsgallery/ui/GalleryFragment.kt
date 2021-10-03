@@ -50,8 +50,8 @@ class GalleryFragment : Fragment(), CatListener {
         return binding.root
     }
 
-    private fun initViews() = binding.run {
-        recyclerView.run {
+    private fun initViews() {
+        binding.recyclerView.run {
             layoutManager = GridLayoutManager(requireContext(), 3)
             adapter = catAdapter.withLoadStateHeaderAndFooter(
                 header = CatsLoaderStateAdapter(),
@@ -61,13 +61,29 @@ class GalleryFragment : Fragment(), CatListener {
     }
 
     private fun setListeners() {
-        // Show spinner instead of RecyclerView, before until data is loaded
+
         catAdapter.addLoadStateListener { state ->
             binding.run {
+                // Show spinner instead of RecyclerView, before until data is loaded
                 recyclerView.isVisible = state.refresh != LoadState.Loading
-                includeSpinner.spinner.isVisible = state.refresh == LoadState.Loading
+                includeSpinner.spinner.isVisible = state.refresh is LoadState.Loading
+                // Show error message and "retry" button if get loading error
+                errorTextView.isVisible =
+                    state.refresh is LoadState.Error ||
+                        state.append is LoadState.Error
+                retryButton.isVisible =
+                    state.refresh is LoadState.Error ||
+                        state.append is LoadState.Error
+            }
+
+            // Get error state and show error message
+            val errorState = state.refresh as? LoadState.Error ?: state.append as? LoadState.Error
+            errorState?.let {
+                binding.errorTextView.text = it.error.localizedMessage
             }
         }
+
+        binding.retryButton.setOnClickListener { catAdapter.retry() }
     }
 
     private fun setObservers() {

@@ -8,14 +8,31 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         tools:listitem="@layout/item_cat" />
 
     <include
         layout="@layout/spinner"
         android:id="@+id/include_spinner"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/error_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:text="@tools:sample/lorem"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/retry_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_weight="1" />
+        android:layout_margin="16dp"
+        android:visibility="gone"
+        android:text="@string/retry_button" />
 </LinearLayout>

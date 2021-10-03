@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.paging.LoadState
 import androidx.paging.LoadStateAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.secondslot.thecatsapi.R
 import com.secondslot.thecatsapi.databinding.ItemErrorBinding
 import com.secondslot.thecatsapi.databinding.ItemProgressBinding
 
@@ -72,7 +73,7 @@ class CatsLoaderStateAdapter : LoadStateAdapter<CatsLoaderStateAdapter.ItemViewH
 
         override fun bind(loadState: LoadState) {
             require(loadState is LoadState.Error)
-            binding.errorMessage.text = loadState.error.localizedMessage
+            binding.errorMessage.text = itemView.context.getString(R.string.adapter_item_error)
         }
 
         companion object {

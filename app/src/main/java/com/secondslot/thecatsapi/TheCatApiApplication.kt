@@ -2,6 +2,7 @@ package com.secondslot.thecatsapi
 
 import android.app.Application
 import com.secondslot.thecatsapi.di.AppComponent
+import com.secondslot.thecatsapi.di.AppModule
 import com.secondslot.thecatsapi.di.DaggerAppComponent
 
 class TheCatApiApplication : Application() {
@@ -11,6 +12,7 @@ class TheCatApiApplication : Application() {
 
         appComponent = DaggerAppComponent
             .builder()
+            .appModule(AppModule(this))
             .build()
     }
 

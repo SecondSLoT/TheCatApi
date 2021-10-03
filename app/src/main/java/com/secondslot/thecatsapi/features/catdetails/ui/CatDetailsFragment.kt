@@ -31,8 +31,8 @@ class CatDetailsFragment : Fragment() {
     ): View {
         _binding = FragmentDetailsBinding.inflate(inflater, container, false)
 
-        val androidViewModelFactory = CatDetailsViewModelFactory(requireActivity().application)
-        _viewModel = ViewModelProvider(this, androidViewModelFactory)
+        val viewModelFactory = CatDetailsViewModelFactory(requireActivity().application)
+        _viewModel = ViewModelProvider(this, viewModelFactory)
             .get(CatDetailsViewModel::class.java)
 
         initViews()
@@ -48,9 +48,7 @@ class CatDetailsFragment : Fragment() {
 
     private fun setListeners() {
         binding.downloadButton.setOnClickListener {
-//            lifecycleScope.launch {
-            viewModel.saveMediaToStorage(args.url)
-//            }
+            viewModel.downloadImage(args.url)
         }
     }
 
