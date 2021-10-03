@@ -1,2 +1,2 @@
 rootProject.name = "TheCatsApi"
-include(Modules.APP)
+include(":app")
