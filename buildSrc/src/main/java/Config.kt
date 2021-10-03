@@ -1,7 +1,7 @@
 object Config {
 
     object Dependencies {
-        const val GRADLE_PLUGIN = "com.android.tools.build:gradle${Versions.GRADLE}"
+        const val GRADLE_PLUGIN = "com.android.tools.build:gradle:${Versions.GRADLE}"
         const val KOTLIN_GRADLE_PLUGIN =
             "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.KOTLIN}"
         const val NAVIGATION_SAFEARGS_PLUGIN =
