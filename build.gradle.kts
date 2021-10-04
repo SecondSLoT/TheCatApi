@@ -3,6 +3,11 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        mavenCentral {
+            content {
+                includeGroup("org.jetbrains.kotlinx")
+            }
+        }
     }
 
     dependencies {
@@ -17,6 +22,14 @@ buildscript {
     }
 }
 
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url = uri("https://jitpack.io") }
+        maven { url = uri("https://maven.pkg.jetbrains.space/public/p/kotlinx-html/maven") }
+    }
+}
 //plugins {
 //    id("io.gitlab.arturbosch.detekt") version "1.18.1"
 //    id("org.jlleitschuh.gradle.ktlint") version "9.2.1"
