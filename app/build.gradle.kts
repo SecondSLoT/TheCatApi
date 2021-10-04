@@ -57,7 +57,7 @@ dependencies {
     implementation(Dependencies.Paging.RUNTIME)
 
     // Retrofit
-    implementation(Dependencies.Retrofit.RETROFIT)
+    implementation(Dependencies.Retrofit.RETROFIT_LIB)
     implementation(Dependencies.Retrofit.CONVERTER_GSON)
 
     // Okhttp
@@ -71,7 +71,7 @@ dependencies {
     implementation(Dependencies.Navigation.UI)
 
     // Glide
-    implementation(Dependencies.Glide.GLIDE)
+    implementation(Dependencies.Glide.GLIDE_LIB)
     implementation(Dependencies.Glide.COMPILER)
 
     // Room

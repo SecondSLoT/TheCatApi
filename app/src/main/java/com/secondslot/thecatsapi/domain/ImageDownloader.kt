@@ -63,11 +63,15 @@ class ImageDownloader(private val context: Context) {
 
         fos?.use {
             //Finally writing the bitmap to the output stream that we opened
-            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, it)
+            bitmap.compress(Bitmap.CompressFormat.JPEG, COMRESS_QUALITY, it)
             Log.d(TAG, "Saved to Photos")
             return true
         }
 
         return false
+    }
+
+    companion object {
+        private const val COMRESS_QUALITY = 100
     }
 }

@@ -52,7 +52,7 @@ class GalleryFragment : Fragment(), CatListener {
 
     private fun initViews() {
         binding.recyclerView.run {
-            layoutManager = GridLayoutManager(requireContext(), 3)
+            layoutManager = GridLayoutManager(requireContext(), RECYCLER_VIEW_SPAN_COUNT)
             adapter = catAdapter.withLoadStateHeaderAndFooter(
                 header = CatsLoaderStateAdapter(),
                 footer = CatsLoaderStateAdapter()
@@ -96,5 +96,9 @@ class GalleryFragment : Fragment(), CatListener {
     override fun onCatSelected(cat: Cat) {
         val action = GalleryFragmentDirections.toCatDetailsFragment(cat.url)
         findNavController().navigate(action)
+    }
+
+    companion object {
+        private const val RECYCLER_VIEW_SPAN_COUNT = 3
     }
 }

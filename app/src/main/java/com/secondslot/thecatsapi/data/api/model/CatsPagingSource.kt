@@ -6,6 +6,7 @@ import androidx.paging.PagingState
 import com.secondslot.thecatsapi.data.api.retrofit.TheCatApiService
 import com.secondslot.thecatsapi.data.repository.model.Cat
 import retrofit2.HttpException
+import java.io.IOException
 import javax.inject.Inject
 
 private const val TAG = "CatsPagingSource"
@@ -37,9 +38,9 @@ class CatsPagingSource @Inject constructor(
                 LoadResult.Error(HttpException(response))
             }
 
-        } catch (e: Exception) {
+        } catch (ioe: IOException) {
             Log.e(TAG, "Error downloading photos from server")
-            return LoadResult.Error(e)
+            return LoadResult.Error(ioe)
         }
     }
 

@@ -1,4 +1,4 @@
-package com.secondslot.thecatsapi.core.LiveDataEventWrapper
+package com.secondslot.thecatsapi.core.liveDataEventWrapper
 
 /**
  * Used as a wrapper for data that is exposed via a LiveData that represents an event.

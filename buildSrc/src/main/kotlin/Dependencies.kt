@@ -26,7 +26,7 @@ object Dependencies {
     }
 
     object Retrofit {
-        const val RETROFIT = "com.squareup.retrofit2:retrofit:${Versions.RETROFIT}"
+        const val RETROFIT_LIB = "com.squareup.retrofit2:retrofit:${Versions.RETROFIT}"
         const val CONVERTER_GSON = "com.squareup.retrofit2:converter-gson:${Versions.RETROFIT}"
     }
 
@@ -41,7 +41,7 @@ object Dependencies {
     }
 
     object Glide {
-        const val GLIDE = "com.github.bumptech.glide:glide:${Versions.GLIDE}"
+        const val GLIDE_LIB = "com.github.bumptech.glide:glide:${Versions.GLIDE}"
         const val COMPILER = "com.github.bumptech.glide:compiler:${Versions.GLIDE}"
     }
 

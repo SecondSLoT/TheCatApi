@@ -8,8 +8,6 @@ import com.secondslot.seloustev.extentions.loadImage
 import com.secondslot.thecatsapi.data.repository.model.Cat
 import com.secondslot.thecatsapi.databinding.ItemCatBinding
 
-private const val TAG = "CatViewHolder"
-
 class CatViewHolder(
     private val binding: ItemCatBinding,
     private val listener: CatListener
