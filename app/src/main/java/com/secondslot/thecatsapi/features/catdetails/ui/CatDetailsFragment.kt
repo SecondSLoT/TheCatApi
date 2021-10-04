@@ -43,7 +43,6 @@ class CatDetailsFragment : Fragment() {
 
     private fun initViews() {
         binding.catImageView.loadImage(args.url)
-//        binding.urlTextView.text = args.url
     }
 
     private fun setListeners() {

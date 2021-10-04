@@ -9,8 +9,6 @@ import com.secondslot.thecatsapi.domain.ImageDownloader
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-private const val TAG = "CatDetailsViewModel"
-
 class CatDetailsViewModel(
     private val imageDownloader: ImageDownloader
 ) : ViewModel() {

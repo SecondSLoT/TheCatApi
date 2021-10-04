@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name" translatable="false">The Cat Api</string>
 
+    <string name="download_button">Download</string>
     <string name="retry_button">Retry</string>
     <string name="adapter_item_error">Error downloading picture</string>
 </resources>

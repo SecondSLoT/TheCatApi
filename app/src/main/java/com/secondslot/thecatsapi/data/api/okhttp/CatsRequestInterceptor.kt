@@ -11,14 +11,8 @@ class CatsRequestInterceptor : Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {
         val originalRequest: Request = chain.request()
 
-//        val newUrl: HttpUrl = originalRequest.url.newBuilder()
-//            .addPathSegment("search")
-//            .build()
-
-
         val newRequest: Request = originalRequest.newBuilder()
             .header("x-api-key", API_KEY)
-//            .url(newUrl)
             .build()
 
         return chain.proceed(newRequest)

@@ -19,39 +19,9 @@ import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.stateIn
 
-//import javax.inject.Inject
-
 private const val TAG = "GalleryViewModel"
 
 class GalleryViewModel(private val getCatsUseCase: GetCatsUseCase) : ViewModel() {
-
-    val requestListener = object : RequestListener<Drawable> {
-
-        override fun onLoadFailed(
-            e: GlideException?,
-            model: Any?,
-            target: Target<Drawable>?,
-            isFirstResource: Boolean
-        ): Boolean {
-
-            Log.d(TAG, "onLoadFailed()")
-
-            return false
-        }
-
-        override fun onResourceReady(
-            resource: Drawable?,
-            model: Any?,
-            target: Target<Drawable>?,
-            dataSource: DataSource?,
-            isFirstResource: Boolean
-        ): Boolean {
-
-            Log.d(TAG, "onResourceReady()")
-
-            return false
-        }
-    }
 
     init {
         TheCatApiApplication.getComponent().injectGalleryFragment(this)

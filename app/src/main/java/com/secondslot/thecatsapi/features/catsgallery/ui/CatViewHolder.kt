@@ -25,10 +25,7 @@ class CatViewHolder(
 
         this.cat = cat
 
-        binding.run {
-            catImageView.loadImage(cat.url)
-//            label.text = cat.id
-        }
+        binding.catImageView.loadImage(cat.url)
     }
 
     override fun onClick(p0: View?) {
