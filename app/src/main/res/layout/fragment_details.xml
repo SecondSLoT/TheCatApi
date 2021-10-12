@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- It is preferable to add the content description to the images. -->
     <ImageView
         android:id="@+id/cat_image_view"
         android:layout_width="0dp"

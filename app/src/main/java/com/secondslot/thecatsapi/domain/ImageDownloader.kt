@@ -16,6 +16,7 @@ import java.io.OutputStream
 
 private const val TAG = "ImageDownloader"
 
+// I think it's a data layer class.
 class ImageDownloader(private val context: Context) {
 
     @WorkerThread

@@ -19,6 +19,7 @@ class AppModule(
     @Provides
     fun provideTheCatApiService(): TheCatApiService = TheCatApiService.create()
 
+    // Look at the @Binds + Inject to the constructor instead of manual instantiate dependencies for this case.
     @ApplicationScope
     @Provides
     fun provideCatsRepository(): CatsRepository =

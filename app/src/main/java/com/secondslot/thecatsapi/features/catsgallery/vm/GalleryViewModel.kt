@@ -16,6 +16,7 @@ import kotlinx.coroutines.flow.stateIn
 class GalleryViewModel(private val getCatsUseCase: GetCatsUseCase) : ViewModel() {
 
     init {
+        // For what do you use this providing?
         TheCatApiApplication.getComponent().injectGalleryFragment(this)
     }
 

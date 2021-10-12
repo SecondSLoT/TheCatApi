@@ -16,6 +16,7 @@ class CatAdapter(
     }
 
     override fun onBindViewHolder(holder: CatViewHolder, position: Int) {
+        // This position isn't final. Better to use holder.bindingAdapterPosition.
         getItem(position)?.let { holder.bind(it) }
     }
 

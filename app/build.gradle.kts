@@ -91,4 +91,5 @@ dependencies {
     testImplementation(Dependencies.Test.Unit.JUNIT)
     androidTestImplementation(Dependencies.Test.Integration.JUNIT)
     androidTestImplementation(Dependencies.Test.Integration.ESPRESSO_CORE)
+    testImplementation("org.mockito.kotlin:mockito-kotlin:3.2.0")
 }
