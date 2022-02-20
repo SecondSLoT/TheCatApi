@@ -4,7 +4,7 @@ import android.util.Log
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.secondslot.thecatsapi.data.api.retrofit.TheCatApiService
-import com.secondslot.thecatsapi.data.repository.model.Cat
+import com.secondslot.thecatsapi.domain.model.Cat
 import retrofit2.HttpException
 import java.io.IOException
 import javax.inject.Inject
@@ -32,7 +32,7 @@ class CatsPagingSource @Inject constructor(
             return if (response.isSuccessful) {
                 val cats = checkNotNull(response.body()).map { it.toItem() }
                 val nextKey = if (cats.size < pageSize) null else page + 1
-                val prevKey = if (page == 1) null else page - 1
+                val prevKey = if (page == INITIAL_PAGE_NUMBER) null else page - 1
                 LoadResult.Page(cats, prevKey, nextKey)
             } else {
                 LoadResult.Error(HttpException(response))

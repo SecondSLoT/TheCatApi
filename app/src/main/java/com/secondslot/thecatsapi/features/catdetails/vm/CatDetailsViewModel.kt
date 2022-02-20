@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.secondslot.thecatsapi.core.liveDataEventWrapper.LiveDataEvent
-import com.secondslot.thecatsapi.domain.ImageDownloader
+import com.secondslot.thecatsapi.data.local.ImageDownloader
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

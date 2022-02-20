@@ -15,7 +15,6 @@ import com.secondslot.thecatsapi.features.catdetails.vm.CatDetailsViewModelFacto
 
 class CatDetailsFragment : Fragment() {
 
-    //    private val viewModel by viewModels<CatDetailsViewModel>()
     private var _viewModel: CatDetailsViewModel? = null
     private val viewModel get() = requireNotNull(_viewModel)
 

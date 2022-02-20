@@ -30,6 +30,7 @@ object Versions {
         object Integration {
             const val JUNIT = "1.1.3"
             const val ESPRESSO_CORE = "3.4.0"
+            const val MOCKITO = "4.0.0"
         }
     }
 

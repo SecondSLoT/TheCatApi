@@ -1,7 +1,7 @@
 package com.secondslot.thecatsapi.domain
 
 import androidx.paging.PagingSource
-import com.secondslot.thecatsapi.data.repository.model.Cat
+import com.secondslot.thecatsapi.domain.model.Cat
 
 interface CatsRepository {
 

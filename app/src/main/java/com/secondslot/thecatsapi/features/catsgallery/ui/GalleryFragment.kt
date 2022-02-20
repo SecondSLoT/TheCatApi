@@ -12,8 +12,8 @@ import androidx.navigation.fragment.findNavController
 import androidx.paging.LoadState
 import androidx.recyclerview.widget.GridLayoutManager
 import com.secondslot.thecatsapi.TheCatApiApplication
-import com.secondslot.thecatsapi.data.repository.model.Cat
 import com.secondslot.thecatsapi.databinding.FragmentGalleryBinding
+import com.secondslot.thecatsapi.domain.model.Cat
 import com.secondslot.thecatsapi.features.catsgallery.adapter.CatAdapter
 import com.secondslot.thecatsapi.features.catsgallery.adapter.CatsLoaderStateAdapter
 import com.secondslot.thecatsapi.features.catsgallery.vm.GalleryViewModel

@@ -8,28 +8,16 @@
     app:cardCornerRadius="8dp">
 
     <!-- It looks like FrameLayout is unnecessary now. -->
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+    <!-- Yes, you are right -->
         <ImageView
             android:id="@+id/cat_image_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
+            android:contentDescription="@string/image_content_description"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:src="@tools:sample/backgrounds/scenic" />
-
-        <!--        <TextView-->
-        <!--            android:id="@+id/label"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_gravity="center_horizontal|bottom"-->
-        <!--            android:textColor="@android:color/holo_red_dark"-->
-        <!--            android:textAlignment="center"-->
-        <!--            tools:text="ID = 30348"/>-->
-    </FrameLayout>
 </androidx.cardview.widget.CardView>

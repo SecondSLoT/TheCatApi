@@ -4,4 +4,5 @@
     <string name="download_button">Download</string>
     <string name="retry_button">Retry</string>
     <string name="adapter_item_error">Error downloading picture</string>
+    <string name="image_content_description">Cat photo</string>
 </resources>

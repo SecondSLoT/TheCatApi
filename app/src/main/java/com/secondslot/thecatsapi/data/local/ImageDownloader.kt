@@ -1,4 +1,4 @@
-package com.secondslot.thecatsapi.domain
+package com.secondslot.thecatsapi.data.local
 
 import android.content.ContentValues
 import android.content.Context
@@ -14,9 +14,8 @@ import java.io.File
 import java.io.FileOutputStream
 import java.io.OutputStream
 
-private const val TAG = "ImageDownloader"
-
 // I think it's a data layer class.
+// Agree. Replaced it to data layer
 class ImageDownloader(private val context: Context) {
 
     @WorkerThread
@@ -64,7 +63,7 @@ class ImageDownloader(private val context: Context) {
 
         fos?.use {
             //Finally writing the bitmap to the output stream that we opened
-            bitmap.compress(Bitmap.CompressFormat.JPEG, COMRESS_QUALITY, it)
+            bitmap.compress(Bitmap.CompressFormat.JPEG, COMPRESS_QUALITY, it)
             Log.d(TAG, "Saved to Photos")
             return true
         }
@@ -73,6 +72,7 @@ class ImageDownloader(private val context: Context) {
     }
 
     companion object {
-        private const val COMRESS_QUALITY = 100
+        private const val TAG = "ImageDownloader"
+        private const val COMPRESS_QUALITY = 100
     }
 }

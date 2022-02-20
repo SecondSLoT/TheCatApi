@@ -13,7 +13,7 @@ import retrofit2.http.Query
 
 interface TheCatApiService {
 
-    @GET("v1/images/search")
+    @GET("search")
     suspend fun getPhotos(
         @Query("limit") limit: Int,
         @Query("page") page: Int,
@@ -21,7 +21,7 @@ interface TheCatApiService {
     ): Response<List<CatRemote>>
 
     companion object {
-        private const val BASE_URL = "https://api.thecatapi.com/"
+        private const val BASE_URL = "https://api.thecatapi.com/v1/images/"
         const val MAX_PAGE_SIZE = 50
 
         fun create(): TheCatApiService {

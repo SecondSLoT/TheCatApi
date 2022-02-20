@@ -7,12 +7,14 @@
     android:layout_height="match_parent">
 
     <!-- It is preferable to add the content description to the images. -->
+    <!-- Done -->
     <ImageView
         android:id="@+id/cat_image_view"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="16dp"
         android:scaleType="centerCrop"
+        android:contentDescription="@string/image_content_description"
         tools:src="@tools:sample/backgrounds/scenic"
         app:layout_constraintBottom_toTopOf="@+id/download_button"
         app:layout_constraintEnd_toEndOf="parent"

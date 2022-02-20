@@ -66,6 +66,8 @@ object Dependencies {
             const val JUNIT = "androidx.test.ext:junit:${Versions.Test.Integration.JUNIT}"
             const val ESPRESSO_CORE =
                 "androidx.test.espresso:espresso-core:${Versions.Test.Integration.ESPRESSO_CORE}"
+            const val MOCKITO_KOTLIN =
+                "org.mockito.kotlin:mockito-kotlin:${Versions.Test.Integration.MOCKITO}"
         }
     }
 }

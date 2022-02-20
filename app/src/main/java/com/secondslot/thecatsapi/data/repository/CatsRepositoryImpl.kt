@@ -3,7 +3,7 @@ package com.secondslot.thecatsapi.data.repository
 import androidx.paging.PagingSource
 import com.secondslot.seloustev.di.ApplicationScope
 import com.secondslot.thecatsapi.data.api.model.CatsPagingSource
-import com.secondslot.thecatsapi.data.repository.model.Cat
+import com.secondslot.thecatsapi.domain.model.Cat
 import com.secondslot.thecatsapi.domain.CatsRepository
 import javax.inject.Inject
 
